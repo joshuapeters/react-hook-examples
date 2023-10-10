@@ -2,19 +2,23 @@ import { useEffect, useState } from "react";
 
 export const UseEffect = (): JSX.Element => {
   const [count, setCount] = useState(0);
-  const [isEven, setIsEven] = useState(false);
-  const [isOdd, setIsOdd] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("blue");
 
   useEffect(() => {
-    setIsEven(count % 2 === 0);
-    setIsOdd(count % 2 !== 0);
+    if (count % 2 === 0) {
+      setBackgroundColor("blue");
+    } else {
+      setBackgroundColor("purple");
+    }
   }, [count]);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: backgroundColor,
+        padding: "1rem",
+      }}>
       <p>{count}</p>
-      <p>Is Even: {isEven.toString()}</p>
-      <p>Is Odd: {isOdd.toString()}</p>
       <button onClick={() => setCount(count + 1)}>Click me!</button>
     </div>
   );
