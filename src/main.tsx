@@ -6,6 +6,7 @@ import App from "./App";
 import { UseState } from "./pages/UseState";
 import { UseRef } from "./pages/UseRef";
 import { UseEffect } from "./pages/UseEffect";
+import { UseContext } from "./pages/UseContext/UseContext";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/useRef",
     element: <UseRef />,
+  },
+  {
+    path: "/useContext",
+    element: <UseContext />,
   },
 ]);
 

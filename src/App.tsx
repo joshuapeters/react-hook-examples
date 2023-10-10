@@ -16,6 +16,9 @@ function App() {
           <li>
             <a href="/useRef">useRef</a>
           </li>
+          <li>
+            <a href="/useContext">useContext</a>
+          </li>
         </ul>
       </header>
     </div>
